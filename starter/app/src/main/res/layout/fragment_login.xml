@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- ConstraintLayout for containing the widgets of LoginFragment-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="30dp"
         tools:context=".screen.login.LoginFragment">
 
+        <!-- Email label -->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/email_label_text_view"
             android:layout_width="wrap_content"
@@ -20,6 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Email value -->
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/email_address_edit_text"
             android:layout_width="0dp"
@@ -29,6 +32,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_label_text_view" />
 
+        <!-- Password label -->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/password_label_text_view"
             android:layout_width="wrap_content"
@@ -42,6 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_address_edit_text" />
 
+        <!-- Password value -->
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/password_edit_text"
             android:layout_width="0dp"
@@ -52,7 +57,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password_label_text_view" />
 
-
+        <!-- Button for logging in -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login_button"
             android:layout_width="0dp"
@@ -68,6 +73,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password_edit_text" />
 
+        <!-- Button for registration -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/register_button"
             android:layout_width="0dp"

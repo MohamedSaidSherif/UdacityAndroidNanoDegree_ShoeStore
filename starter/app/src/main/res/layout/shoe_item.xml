@@ -9,6 +9,7 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- CardView for containing the widgets of each shoe item -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,11 +17,13 @@
         android:layout_marginVertical="6dp"
         app:cardCornerRadius="8dp">
 
+        <!-- ConstraintLayout for containing the widgets of each shoe item -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp">
 
+            <!-- Barrier for separating the values from the labels by equal distance-->
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/label_barrier"
                 android:layout_width="wrap_content"
@@ -29,6 +32,7 @@
                 app:barrierMargin="10dp"
                 app:constraint_referenced_ids="tv_name_label, tv_size_label, tv_company_label, tv_description_label" />
 
+            <!-- Name label-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_name_label"
                 style="@style/shoe_item_label"
@@ -38,6 +42,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- Name value-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_name_value"
                 style="@style/shoe_item"
@@ -48,6 +53,7 @@
                 app:layout_constraintStart_toEndOf="@id/label_barrier"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- Size label-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_size_label"
                 style="@style/shoe_item_label"
@@ -58,6 +64,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_name_label" />
 
+            <!-- Size value-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_size_value"
                 style="@style/shoe_item"
@@ -68,6 +75,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_name_label"
                 app:text="@{shoe.size}" />
 
+            <!-- Company label-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_company_label"
                 style="@style/shoe_item_label"
@@ -78,6 +86,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_size_label" />
 
+            <!-- Company value-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_company_value"
                 style="@style/shoe_item"
@@ -88,6 +97,7 @@
                 app:layout_constraintStart_toEndOf="@id/label_barrier"
                 app:layout_constraintTop_toBottomOf="@id/tv_size_label" />
 
+            <!-- Description label-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_description_label"
                 style="@style/shoe_item_label"
@@ -98,6 +108,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_company_label" />
 
+            <!-- Description value-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_description_value"
                 style="@style/shoe_item"

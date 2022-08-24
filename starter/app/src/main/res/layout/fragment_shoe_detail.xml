@@ -9,16 +9,19 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- ScrollView for making the WelcomeFragment scrollable-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- LinearLayout for containing the widgets of ShoeDetailFragment-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:orientation="vertical">
 
+            <!-- TextInputLayout for name -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name_text_field"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -33,6 +36,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- TextInputLayout for size -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/size_text_field"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -48,6 +52,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- TextInputLayout for company -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/company_text_field"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -62,6 +67,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- TextInputLayout for description -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/description_text_field"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -76,6 +82,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Button for saving the shoe item and go back-->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/save_button"
                 android:layout_width="match_parent"
@@ -88,6 +95,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <!-- TextInputLayout for cancel and go back -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cancel_button"
                 android:layout_width="match_parent"
