@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
+import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.screen.MainActivityViewModel
 import com.udacity.shoestore.screen.onboarding.instruction_screen.InstructionsFragmentDirections
 
@@ -33,23 +34,24 @@ class ShoeDetailFragment : Fragment() {
 
     private fun setupListenerForViews() {
         with(binding) {
+            shoe = Shoe("", 0.0, "", "")
             saveButton.setOnClickListener {
-                val name = nameTextField.editText?.text.toString()
+                val name = shoe?.name ?: ""
                 if (name.isEmpty()) {
                     showToast("Please fill the name field")
                     return@setOnClickListener
                 }
-                val size = sizeTextField.editText?.text.toString()
+                val size = shoe?.size?.toString() ?: ""
                 if (size.isEmpty()) {
                     showToast("Please fill the size field")
                     return@setOnClickListener
                 }
-                val company = companyTextField.editText?.text.toString()
+                val company = shoe?.company ?: ""
                 if (company.isEmpty()) {
                     showToast("Please fill the company field")
                     return@setOnClickListener
                 }
-                val description = descriptionTextField.editText?.text.toString()
+                val description = shoe?.description ?: ""
                 if (description.isEmpty()) {
                     showToast("Please fill the description field")
                     return@setOnClickListener
